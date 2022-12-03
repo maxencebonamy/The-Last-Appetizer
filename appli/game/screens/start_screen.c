@@ -1,7 +1,7 @@
 #include "start_screen.h"
 
 static IHM_Rect previousButton = { 10, 10, 60, 60 };
-static IHM_Rect nextButton = { 20, 160, 300, 200 };
+static IHM_Rect nextButton = { 20, 150, 300, 210 };
 
 static bool_e previousScreen = FALSE;
 static bool_e nextScreen = FALSE;
@@ -33,7 +33,7 @@ void START_SCREEN_Display(void) {
     IHM_DrawRoundedRectangle(70, 10, 310, 60, IHM_COLOR_WHITE, IHM_COLOR_RED, 25);
     IHM_Write(70, 10, 310, 60, "LANCEMENT", IHM_COLOR_RED, IHM_COLOR_WHITE);
 
-    IHM_Write(20, 100, 300, 140, "Etes-vous prets ?", IHM_COLOR_BLACK, IHM_COLOR_WHITE);
+    IHM_Write(20, 90, 300, 130, "Etes-vous prets ?", IHM_COLOR_BLACK, IHM_COLOR_WHITE);
     IHM_DisplayButton(&nextButton, "LANCER LA PARTIE", IHM_COLOR_BLUE);
 }
 

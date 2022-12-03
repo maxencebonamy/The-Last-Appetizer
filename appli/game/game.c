@@ -1,7 +1,15 @@
+/**
+ * @brief Gestion de la partie
+ * @author Maxence & Aymeric
+ */
+
 #include "game.h"
 
-static bool_e hasBeenInit = FALSE;
+
+/// État actuel de la machine à états
 static State state = OPTIONS;
+/// Variable qui va permettre d'effectuer l'action d'initialisation d'un état une seule fois
+static bool_e hasBeenInit = FALSE;
 
 void GAME_Init(void) {
 	IHM_Init();

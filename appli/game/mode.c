@@ -1,5 +1,12 @@
+/**
+ * @brief Gestion du mode de jeu
+ * @author Maxence & Aymeric
+ */
+
 #include "mode.h"
 
+
+/// Mode actuellement selectionné
 static Mode mode = FAMILLE;
 
 Mode MODE_Get(void) {
@@ -7,6 +14,7 @@ Mode MODE_Get(void) {
 }
 
 void MODE_Change(void) {
+    // retour au premier si le mode actuel est le dernier
 	if (++mode > 2) {
 		mode = 0;
 	}

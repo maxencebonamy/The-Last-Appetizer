@@ -1,3 +1,8 @@
+/**
+ * @brief IHM (Interface Homme-Machine) qui permet de gérer l'affichage et le mode tactile de l'écran
+ * @author Maxence & Aymeric
+ */
+
 #pragma once
 
 #include "tft_ili9341/stm32f1_ili9341.h"
@@ -69,18 +74,6 @@ void IHM_Fill(uint16_t color);
 void IHM_DrawFilledRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);
 
 /**
- * @brief Dessine un rectangle avec des coins arrondis
- * @param x0 Coordonnée x du coin en haut à gauche
- * @param y0 Coordonnée y du coin en haut à gauche
- * @param x1 Coordonnée x du coin en bas à droite
- * @param y1 Coordonnée y du coin en bas à droite
- * @param color Couleur de la bordure
- * @param radius Rayon des coins arrondis
- * @pre L'IHM doit avoir été initialisée au préalable
- */
-void IHM_DrawRoundedRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color, uint16_t borderColor, uint16_t radius);
-
-/**
  * @brief Dessine un rectangle plein avec des coins arrondis
  * @param x0 Coordonnée x du coin en haut à gauche
  * @param y0 Coordonnée y du coin en haut à gauche
@@ -91,6 +84,18 @@ void IHM_DrawRoundedRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1
  * @pre L'IHM doit avoir été initialisée au préalable
  */
 void IHM_DrawFilledRoundedRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color, uint16_t radius);
+
+/**
+ * @brief Dessine un rectangle avec des coins arrondis
+ * @param x0 Coordonnée x du coin en haut à gauche
+ * @param y0 Coordonnée y du coin en haut à gauche
+ * @param x1 Coordonnée x du coin en bas à droite
+ * @param y1 Coordonnée y du coin en bas à droite
+ * @param color Couleur de la bordure
+ * @param radius Rayon des coins arrondis
+ * @pre L'IHM doit avoir été initialisée au préalable
+ */
+void IHM_DrawRoundedRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color, uint16_t borderColor, uint16_t radius);
 
 /**
  * @brief Dessine un bouton (rectangle à coins arrondis + texte par dessus)
