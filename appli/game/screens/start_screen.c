@@ -14,13 +14,12 @@ void START_SCREEN_Init(void) {
 }
 
 void START_SCREEN_Update(void) {
-	IHM_Update();
-
     if (IHM_IsClicking()) {
         if (IHM_Collide(&previousButton)) {
             previousScreen = TRUE;
         }
         else if (IHM_Collide(&nextButton)) {
+            SCORES_Reset();
             nextScreen = TRUE;
         }
     }
@@ -33,8 +32,8 @@ void START_SCREEN_Display(void) {
     IHM_DrawRoundedRectangle(70, 10, 310, 60, IHM_COLOR_WHITE, IHM_COLOR_RED, 25);
     IHM_Write(70, 10, 310, 60, "LANCEMENT", IHM_COLOR_RED, IHM_COLOR_WHITE);
 
-    IHM_Write(20, 90, 300, 130, "Etes-vous prets ?", IHM_COLOR_BLACK, IHM_COLOR_WHITE);
-    IHM_DisplayButton(&nextButton, "LANCER LA PARTIE", IHM_COLOR_BLUE);
+    IHM_Write(20, 90, 300, 130, "Etes-vous prêts ?", IHM_COLOR_BLACK, IHM_COLOR_WHITE);
+    IHM_DisplayButton(&nextButton, "Lancer la partie", IHM_COLOR_BLUE);
 }
 
 bool_e START_SCREEN_PreviousScreen(void) {

@@ -3,6 +3,7 @@
 #include "../../ihm/ihm.h"
 #include "../mode.h"
 #include "../players.h"
+#include <stdio.h>
 
 void OPTIONS_SCREEN_Init(void);
 void OPTIONS_SCREEN_Update(void);

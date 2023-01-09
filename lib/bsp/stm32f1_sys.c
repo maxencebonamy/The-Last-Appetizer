@@ -97,7 +97,7 @@ void check_stack_occupation(void)
  */
 void SYS_ClockConfig(void)
 {
-#if USE_MIDI
+#if 1
 #if MY_BLUEPILL_IS_COUNTERFEIT
 	#warning "certaines bluebill contrefaites semblent poser un pb de lancement d'un nouveau débogage lorsqu'un code tourne en HSE."
 	//si vous êtes dans ce cas là, que vous avez besoin du HSE (usage USB par exemple), tentez de relier le RESET au NRST de votre sonde de débogage...
@@ -117,7 +117,7 @@ void SYS_ClockConfig(void)
 	 RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL6;
 	 if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
 	 {
-	   Error_Handler();
+	 //  Error_Handler();
 	 }
 	 /** Initializes the CPU, AHB and APB busses clocks
 	 */
@@ -130,13 +130,13 @@ void SYS_ClockConfig(void)
 
 	 if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
 	 {
-	   Error_Handler();
+	 //  Error_Handler();
 	 }
 	 PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USB;
 	 PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL;
 	 if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
 	 {
-	   Error_Handler();
+	  // Error_Handler();
 	 }
 #else
 	RCC_OscInitTypeDef osc = {0};

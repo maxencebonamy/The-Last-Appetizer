@@ -5,19 +5,25 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../appli/game/actions.c \
 ../appli/game/game.c \
 ../appli/game/mode.c \
-../appli/game/players.c 
+../appli/game/players.c \
+../appli/game/scores.c 
 
 OBJS += \
+./appli/game/actions.o \
 ./appli/game/game.o \
 ./appli/game/mode.o \
-./appli/game/players.o 
+./appli/game/players.o \
+./appli/game/scores.o 
 
 C_DEPS += \
+./appli/game/actions.d \
 ./appli/game/game.d \
 ./appli/game/mode.d \
-./appli/game/players.d 
+./appli/game/players.d \
+./appli/game/scores.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

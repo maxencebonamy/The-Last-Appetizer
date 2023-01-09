@@ -1,0 +1,3 @@
+random.c:11:6:RANDOM_Init	4	static
+random.c:17:6:RANDOM_Update	16	static
+random.c:23:10:RANDOM_Get	24	static

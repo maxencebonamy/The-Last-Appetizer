@@ -1,0 +1,4 @@
+action_screen.c:12:6:ACTION_SCREEN_Init	8	static
+action_screen.c:19:6:ACTION_SCREEN_Update	16	static
+action_screen.c:39:6:ACTION_SCREEN_Display	56	static
+action_screen.c:69:8:ACTION_SCREEN_NextScreen	4	static

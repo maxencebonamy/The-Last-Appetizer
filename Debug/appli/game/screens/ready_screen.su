@@ -1,5 +1,0 @@
-ready_screen.c:18:6:READY_SCREEN_Init	8	static
-ready_screen.c:24:6:READY_SCREEN_Update	8	static
-ready_screen.c:37:6:READY_SCREEN_Display	24	static
-ready_screen.c:48:8:READY_SCREEN_PreviousScreen	4	static
-ready_screen.c:52:8:READY_SCREEN_NextScreen	4	static

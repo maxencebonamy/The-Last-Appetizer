@@ -1,0 +1,2 @@
+actions.c:38:9:ACTIONS_GetCurrent	8	static
+actions.c:43:9:ACTIONS_ChooseRandom	16	static

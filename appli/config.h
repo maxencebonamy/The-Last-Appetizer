@@ -57,12 +57,12 @@
 #define USE_BSP_TIMER			1 //Utilisation de stm32f1_timer.c/h
 
 
-#define USE_ADC					0
+#define USE_ADC					1
 	//Ces configurations permettent d'activer les entr�es analogiques souhait�es.
 	//16 entr�es analogiques peuvent �tre activ�es maximum.
 	//2 entr�es analogiques doivent �tre activ�es minimum. (Vref est un choix possible si vous utilisez une seule entr�e)
 	#define USE_AN0			1	//Broche correspondante : PA0
-	#define USE_AN1			0	//Broche correspondante : PA1
+	#define USE_AN1			1	//Broche correspondante : PA1
 	#define USE_AN2			0	//Broche correspondante : PA2	//Sur la Nucleo, cette broche n'est pas c�bl�e !
 	#define USE_AN3			0	//Broche correspondante : PA3	//Sur la Nucleo, cette broche n'est pas c�bl�e !
 	#define USE_AN4			0	//Broche correspondante : PA4
@@ -85,8 +85,8 @@
 	#if USE_SCREEN_TFT_ILI9341
 		#define USE_XPT2046			1	//Tactile
 
-		#define USE_FONT11x18		1
-		#define USE_FONT7x10		1
+		#define USE_FONT11x18		0
+		#define USE_FONT7x10		0
 		#define USE_FONT16x26		1
 
 		#if BLUEPILL					//D�finition des broches CS, WRX et RST pour la BLUEPILL
@@ -133,7 +133,7 @@
 #define USE_MOTOR_DC			0
 #define USE_STEPPER_MOTOR		0
 #define USE_RTC					0
-#define USE_PWM					0
+#define USE_PWM					1
 #define USE_ESP8266				0//Module Wifi
 #define USE_NFC03A1				0
 #define USE_EPAPER				0

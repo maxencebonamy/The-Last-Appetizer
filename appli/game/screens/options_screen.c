@@ -12,15 +12,20 @@ static bool_e nextScreen = FALSE;
 
 
 void OPTIONS_SCREEN_Init(void) {
-	previousScreen = FALSE;
+    previousScreen = FALSE;
 	nextScreen = FALSE;
 	OPTIONS_SCREEN_Display();
 }
 
 void OPTIONS_SCREEN_Update(void) {
-	IHM_Update();
+    static bool_e previousValue = FALSE;
+    static bool_e value = FALSE;
 
-	if (IHM_IsClicking()) {
+    if (value != previousValue) {
+        previousValue = value;
+    }
+
+    if (IHM_IsClicking()) {
 		if (IHM_Collide(&removeButton)) {
 			PLAYERS_Remove();
 			OPTIONS_SCREEN_DisplayPlayerCount();
@@ -56,7 +61,7 @@ void OPTIONS_SCREEN_Display(void) {
 
 	IHM_Write(10, 160, 150, 210, "Joueurs:", IHM_COLOR_BLACK, IHM_COLOR_WHITE);
 	IHM_DisplayButton(&removeButton, "-", IHM_COLOR_BLUE);
-	OPTIONS_SCREEN_DisplayPlayerCount();
+    OPTIONS_SCREEN_DisplayPlayerCount();
 	IHM_DisplayButton(&addButton, "+", IHM_COLOR_BLUE);
 }
 
@@ -75,6 +80,6 @@ static void OPTIONS_SCREEN_DisplayModeButton(void) {
 static void OPTIONS_SCREEN_DisplayPlayerCount(void) {
 	IHM_DrawFilledRectangle(215, 160, 255, 210, IHM_COLOR_WHITE);
 	char playerCountString[2];
-	sprintf(playerCountString, "%d", PLAYERS_Get());
+	sprintf(playerCountString, "%d", PLAYERS_GetCount());
 	IHM_Write(215, 160, 255, 210, playerCountString, IHM_COLOR_BLACK, IHM_COLOR_WHITE);
 }

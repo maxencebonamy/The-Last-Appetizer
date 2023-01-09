@@ -1,0 +1,4 @@
+screen_tests.c:4:6:TEST_SCREEN_WriteText	24	static
+screen_tests.c:12:6:TEST_SCREEN_DrawShapes	24	static
+screen_tests.c:21:6:TEST_SCREEN_ButtonClick	32	static
+screen_tests.c:38:6:TEST_SCREEN_GameBoard	8	static

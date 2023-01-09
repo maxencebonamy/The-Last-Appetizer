@@ -5,20 +5,32 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../appli/game/screens/action_screen.c \
+../appli/game/screens/arrow_screen.c \
+../appli/game/screens/end_screen.c \
 ../appli/game/screens/home_screen.c \
 ../appli/game/screens/options_screen.c \
+../appli/game/screens/score_screen.c \
 ../appli/game/screens/selection_screen.c \
 ../appli/game/screens/start_screen.c 
 
 OBJS += \
+./appli/game/screens/action_screen.o \
+./appli/game/screens/arrow_screen.o \
+./appli/game/screens/end_screen.o \
 ./appli/game/screens/home_screen.o \
 ./appli/game/screens/options_screen.o \
+./appli/game/screens/score_screen.o \
 ./appli/game/screens/selection_screen.o \
 ./appli/game/screens/start_screen.o 
 
 C_DEPS += \
+./appli/game/screens/action_screen.d \
+./appli/game/screens/arrow_screen.d \
+./appli/game/screens/end_screen.d \
 ./appli/game/screens/home_screen.d \
 ./appli/game/screens/options_screen.d \
+./appli/game/screens/score_screen.d \
 ./appli/game/screens/selection_screen.d \
 ./appli/game/screens/start_screen.d 
 

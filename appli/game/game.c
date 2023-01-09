@@ -7,7 +7,7 @@
 
 
 /// État actuel de la machine à états
-static State state = OPTIONS;
+static State state = START;
 /// Variable qui va permettre d'effectuer l'action d'initialisation d'un état une seule fois
 static bool_e hasBeenInit = FALSE;
 
@@ -16,6 +16,9 @@ void GAME_Init(void) {
 }
 
 void GAME_Update(void) {
+    IHM_Update();
+    GAME_BOARD_Update();
+
 	switch (state) {
 
 	case HOME:
@@ -79,7 +82,71 @@ void GAME_Update(void) {
 
         START_SCREEN_Update();
 
-        if (START_SCREEN_PreviousScreen()) {
+        if (START_SCREEN_NextScreen()) {
+            state = ARROW;
+            hasBeenInit = FALSE;
+        }
+        else if (START_SCREEN_PreviousScreen()) {
+            state = SELECTION;
+            hasBeenInit = FALSE;
+        }
+
+        break;
+
+    case ARROW:
+        if (!hasBeenInit) {
+            ARROW_SCREEN_Init();
+            hasBeenInit = TRUE;
+        }
+
+        ARROW_SCREEN_Update();
+
+        if (ARROW_SCREEN_NextScreen()) {
+            state = ACTION;
+            hasBeenInit = FALSE;
+        }
+
+        break;
+
+    case ACTION:
+        if (!hasBeenInit) {
+            ACTION_SCREEN_Init();
+            hasBeenInit = TRUE;
+        }
+
+        ACTION_SCREEN_Update();
+
+        if (ACTION_SCREEN_NextScreen()) {
+            state = SCORE;
+            hasBeenInit = FALSE;
+        }
+
+        break;
+
+    case SCORE:
+        if (!hasBeenInit) {
+            SCORE_SCREEN_Init();
+            hasBeenInit = TRUE;
+        }
+
+        SCORE_SCREEN_Update();
+
+        if (SCORE_SCREEN_NextScreen()) {
+            state = SCORES_IsMaximumReached() ? END : ARROW;
+            hasBeenInit = FALSE;
+        }
+
+        break;
+    
+    case END:
+        if (!hasBeenInit) {
+            END_SCREEN_Init();
+            hasBeenInit = TRUE;
+        }
+
+        END_SCREEN_Update();
+
+        if (END_SCREEN_NextScreen()) {
             state = OPTIONS;
             hasBeenInit = FALSE;
         }

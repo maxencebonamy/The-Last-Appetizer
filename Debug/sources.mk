@@ -20,10 +20,13 @@ OBJCOPY_BIN :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+appli/arrow \
 appli \
 appli/game \
 appli/game/screens \
 appli/ihm \
+appli/tests \
+appli/utils \
 lib/bsp/APDS9960 \
 lib/bsp/BH1750FVI \
 lib/bsp/CapacitiveKeyboard \

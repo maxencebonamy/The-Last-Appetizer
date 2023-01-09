@@ -15,9 +15,17 @@ Mode MODE_Get(void) {
 
 void MODE_Change(void) {
     // retour au premier si le mode actuel est le dernier
-	if (++mode > 2) {
-		mode = 0;
-	}
+    switch (mode) {
+        case FAMILLE:
+            mode = APERO;
+            break;
+        case APERO:
+            mode = HARD;
+            break;
+        case HARD:
+            mode = FAMILLE;
+            break;
+    }
 }
 
 char* MODE_ToString(void) {
@@ -25,10 +33,8 @@ char* MODE_ToString(void) {
 		case FAMILLE:
 			return "Famille";
 		case APERO:
-			return "Apero";
+			return "Apéro";
 		case HARD:
 			return "Hard";
-		default:
-			return "";
 	}
 }

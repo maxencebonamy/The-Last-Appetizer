@@ -8,7 +8,7 @@
 #include "tft_ili9341/stm32f1_ili9341.h"
 #include "tft_ili9341/stm32f1_xpt2046.h"
 #include "../game/players.h"
-#include <math.h>
+#include "utils/random.h"
 
 
 /// Structure représentant un rectangle
@@ -37,6 +37,7 @@ void IHM_Init(void);
 /**
  * @brief Met à jour l'IHM (fonction qui doit être appelée à chaque frame)
  * @pre L'IHM doit avoir été initialisée au préalable
+ * @pre Cette fonction doit être appelée dans la boucle principale
  */
 void IHM_Update(void);
 
@@ -61,6 +62,17 @@ bool_e IHM_Collide(const IHM_Rect* rect);
  * @pre L'IHM doit avoir été initialisée au préalable
  */
 void IHM_Fill(uint16_t color);
+
+/**
+ * @brief Dessine une ligne
+ * @param x0 Coordonnée x de la première extrémité
+ * @param y0 Coordonnée y de la première extrémité
+ * @param x1 Coordonnée x de la seconde extrémité
+ * @param y1 Coordonnée y de la seconde extrémité
+ * @param color Couleur de remplissage
+ * @param thickness Épaisseur (en pixels)
+ */
+void IHM_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color, uint8_t thickness);
 
 /**
  * @brief Dessine un rectangle
@@ -118,22 +130,3 @@ void IHM_DisplayButton(IHM_Rect* rect, char* title, uint16_t color);
  * @pre L'IHM doit avoir été initialisée au préalable
  */
 void IHM_Write(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, char* content, uint16_t color, uint16_t backgroundColor);
-
-/**
- * @brief Dessine un joueur (triangle + cercle)
- * @param x Coordonnée x du centre du joueur
- * @param y Coordonnée y du centre du joueur
- * @param color Couleur du joueur
- * @pre L'IHM doit avoir été initialisée au préalable
- */
-void IHM_DrawPlayer(uint16_t x, uint16_t y, uint16_t color);
-
-/**
- * @brief Dessine un plateau de jeu (cercle + flèche + joueurs autour)
- * @param x Coordonnée x du centre du plateau
- * @param y Coordonnée y du centre du plateau
- * @param playerIndex Index du joueur selectionné
- * @param playerColor Couleur du joueur selectionné (et de la flèche)
- * @pre L'IHM doit avoir été initialisée au préalable
- */
-void IHM_DrawGameBoard(uint16_t x, uint16_t y, uint8_t playerIndex, uint16_t playerColor);

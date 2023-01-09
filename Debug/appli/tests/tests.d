@@ -1,6 +1,5 @@
-appli/game/screens/ready_screen.o: ../appli/game/screens/ready_screen.c \
- ../appli/game/screens/ready_screen.h \
- ../appli/game/screens/../../ihm/ihm.h \
+appli/tests/tests.o: ../appli/tests/tests.c ../appli/tests/tests.h \
+ ../appli/tests/screen_tests.h ../appli/tests/../ihm/ihm.h \
  ../lib/bsp/tft_ili9341/stm32f1_ili9341.h ../appli/config.h \
  ../lib/hal/inc/stm32f1xx_hal.h ../lib/hal/inc/stm32f1xx_hal_conf.h \
  ../lib/hal/inc/stm32f1xx_hal_rcc.h ../lib/hal/inc/stm32f1xx_hal_def.h \
@@ -29,11 +28,18 @@ appli/game/screens/ready_screen.o: ../appli/game/screens/ready_screen.c \
  ../lib/hal/inc/stm32f1xx_hal_hcd.h \
  ../lib/bsp/tft_ili9341/stm32f1_fonts.h \
  ../lib/bsp/tft_ili9341/stm32f1_xpt2046.h ../lib/bsp/macro_types.h \
- ../appli/game/screens/../../ihm/../game/players.h
+ ../appli/tests/../ihm/../game/players.h \
+ ../appli/tests/../ihm/../game/../utils/random.h ../lib/bsp/stm32f1_adc.h \
+ ../lib/bsp/macro_types.h ../appli/tests/../ihm/game_board.h \
+ ../appli/tests/utils_tests.h ../appli/tests/arrow_test.h \
+ ../appli/tests/../arrow/arrow.h ../lib/bsp/stm32f1_pwm.h \
+ ../lib/bsp/stm32f1_timer.h ../lib/bsp/stm32f1_timer.h
 
-../appli/game/screens/ready_screen.h:
+../appli/tests/tests.h:
 
-../appli/game/screens/../../ihm/ihm.h:
+../appli/tests/screen_tests.h:
+
+../appli/tests/../ihm/ihm.h:
 
 ../lib/bsp/tft_ili9341/stm32f1_ili9341.h:
 
@@ -131,4 +137,24 @@ appli/game/screens/ready_screen.o: ../appli/game/screens/ready_screen.c \
 
 ../lib/bsp/macro_types.h:
 
-../appli/game/screens/../../ihm/../game/players.h:
+../appli/tests/../ihm/../game/players.h:
+
+../appli/tests/../ihm/../game/../utils/random.h:
+
+../lib/bsp/stm32f1_adc.h:
+
+../lib/bsp/macro_types.h:
+
+../appli/tests/../ihm/game_board.h:
+
+../appli/tests/utils_tests.h:
+
+../appli/tests/arrow_test.h:
+
+../appli/tests/../arrow/arrow.h:
+
+../lib/bsp/stm32f1_pwm.h:
+
+../lib/bsp/stm32f1_timer.h:
+
+../lib/bsp/stm32f1_timer.h:

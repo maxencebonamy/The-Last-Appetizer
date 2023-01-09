@@ -57,9 +57,12 @@ RM := rm -rf
 -include lib/bsp/APDS9960/subdir.mk
 -include lib/bsp/subdir.mk
 -include lib/subdir.mk
+-include appli/utils/subdir.mk
+-include appli/tests/subdir.mk
 -include appli/ihm/subdir.mk
 -include appli/game/screens/subdir.mk
 -include appli/game/subdir.mk
+-include appli/arrow/subdir.mk
 -include appli/subdir.mk
 -include subdir.mk
 -include objects.mk

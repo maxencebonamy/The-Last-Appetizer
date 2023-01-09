@@ -1,0 +1,7 @@
+game_board.c:24:6:GAME_BOARD_SetCenterPosition	16	static
+game_board.c:29:6:GAME_BOARD_SetPlayerPointed	24	static
+game_board.c:34:6:GAME_BOARD_SetArrowRotationSpeed	16	static
+game_board.c:38:6:GAME_BOARD_Update	8	static
+game_board.c:50:6:GAME_BOARD_Display	40	static
+game_board.c:70:13:GAME_BOARD_DrawArrow	48	static
+game_board.c:99:13:GAME_BOARD_DrawPlayer	32	static

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../../ihm/ihm.h"
+#include "../scores.h"
 
 void START_SCREEN_Init(void);
 void START_SCREEN_Update(void);

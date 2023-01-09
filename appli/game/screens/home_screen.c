@@ -11,8 +11,6 @@ void HOME_SCREEN_Init() {
 }
 
 void HOME_SCREEN_Update() {
-	IHM_Update();
-
 	if (IHM_IsClicking() && IHM_Collide(&playButton)) {
 		nextScreen = TRUE;
 	}

@@ -1,3 +1,6 @@
-players.c:5:9:PLAYERS_Get	4	static
-players.c:9:6:PLAYERS_Remove	4	static
-players.c:15:6:PLAYERS_Add	4	static
+players.c:15:9:PLAYERS_GetCount	4	static
+players.c:19:6:PLAYERS_Remove	4	static
+players.c:26:6:PLAYERS_Add	4	static
+players.c:33:9:PLAYERS_GetCurrent	4	static
+players.c:37:6:PLAYERS_Next	4	static
+players.c:43:9:PLAYERS_ChooseRandom	8	static

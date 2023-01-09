@@ -7,9 +7,12 @@
 
 
 /// Nombre de joueurs dans la partie
-static uint8_t players = (PLAYERS_MAX + PLAYERS_MIN) / 2;
+static uint8_t players = PLAYERS_MIN;
+/// Indice du joueur courant
+static uint8_t current = 1;
 
-uint8_t PLAYERS_Get(void) {
+
+uint8_t PLAYERS_GetCount(void) {
 	return players;
 }
 
@@ -25,4 +28,19 @@ void PLAYERS_Add(void) {
 	if (++players > PLAYERS_MAX) {
 		players = PLAYERS_MIN;
 	}
+}
+
+uint8_t PLAYERS_GetCurrent(void) {
+    return current;
+}
+
+void PLAYERS_Next(void) {
+    if (++current > players) {
+        current = 1;
+    }
+}
+
+uint8_t PLAYERS_ChooseRandom(void) {
+    current = RANDOM_Get(1, players);
+    return current;
 }

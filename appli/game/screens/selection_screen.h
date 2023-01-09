@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../ihm/ihm.h"
+#include "../../ihm/game_board.h"
 #include "../players.h"
 #include <stdio.h>
 

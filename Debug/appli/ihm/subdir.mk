@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../appli/ihm/game_board.c \
 ../appli/ihm/ihm.c 
 
 OBJS += \
+./appli/ihm/game_board.o \
 ./appli/ihm/ihm.o 
 
 C_DEPS += \
+./appli/ihm/game_board.d \
 ./appli/ihm/ihm.d 
 
 

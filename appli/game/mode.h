@@ -10,9 +10,9 @@
  * @brief Tous les modes de jeu possibles
  */
 typedef enum {
-	FAMILLE = 0,
-	APERO,
-	HARD
+	FAMILLE = 1,
+	APERO = 1 << 1,
+	HARD = 1 << 2
 } Mode;
 
 /**

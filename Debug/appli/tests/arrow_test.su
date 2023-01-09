@@ -1,0 +1,2 @@
+arrow_test.c:4:6:TEST_ARROW_Turn	8	static
+arrow_test.c:12:6:TEST_ARROW_GetAngle	32	static

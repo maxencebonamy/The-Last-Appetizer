@@ -6,10 +6,15 @@
 #pragma once
 
 #include "../ihm/ihm.h"
+#include "scores.h"
 #include "screens/home_screen.h"
 #include "screens/options_screen.h"
 #include "screens/selection_screen.h"
 #include "screens/start_screen.h"
+#include "screens/arrow_screen.h"
+#include "screens/action_screen.h"
+#include "screens/score_screen.h"
+#include "screens/end_screen.h"
 
 
 /**

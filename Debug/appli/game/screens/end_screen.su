@@ -1,0 +1,4 @@
+end_screen.c:9:6:END_SCREEN_Init	8	static
+end_screen.c:14:6:END_SCREEN_Update	8	static
+end_screen.c:20:6:END_SCREEN_Display	48	static
+end_screen.c:30:8:END_SCREEN_NextScreen	4	static

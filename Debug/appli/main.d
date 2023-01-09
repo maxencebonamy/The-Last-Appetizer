@@ -28,10 +28,19 @@ appli/main.o: ../appli/main.c ../lib/hal/inc/stm32f1xx_hal.h \
  ../lib/bsp/tft_ili9341/stm32f1_fonts.h \
  ../lib/bsp/tft_ili9341/stm32f1_xpt2046.h ../lib/bsp/macro_types.h \
  ../appli/game/../ihm/../game/players.h \
- ../appli/game/screens/home_screen.h \
+ ../appli/game/../ihm/../game/../utils/random.h ../lib/bsp/stm32f1_adc.h \
+ ../appli/game/scores.h ../appli/game/screens/home_screen.h \
  ../appli/game/screens/options_screen.h ../appli/game/screens/../mode.h \
  ../appli/game/screens/selection_screen.h \
- ../appli/game/screens/start_screen.h
+ ../appli/game/screens/../../ihm/game_board.h \
+ ../appli/game/screens/start_screen.h \
+ ../appli/game/screens/arrow_screen.h ../appli/game/screens/../actions.h \
+ ../appli/game/screens/action_screen.h \
+ ../appli/game/screens/score_screen.h ../appli/game/screens/end_screen.h \
+ ../appli/tests/tests.h ../appli/tests/screen_tests.h \
+ ../appli/tests/utils_tests.h ../appli/tests/arrow_test.h \
+ ../appli/tests/../arrow/arrow.h ../lib/bsp/stm32f1_pwm.h \
+ ../lib/bsp/stm32f1_timer.h ../lib/bsp/stm32f1_timer.h
 
 ../lib/hal/inc/stm32f1xx_hal.h:
 
@@ -139,6 +148,12 @@ appli/main.o: ../appli/main.c ../lib/hal/inc/stm32f1xx_hal.h \
 
 ../appli/game/../ihm/../game/players.h:
 
+../appli/game/../ihm/../game/../utils/random.h:
+
+../lib/bsp/stm32f1_adc.h:
+
+../appli/game/scores.h:
+
 ../appli/game/screens/home_screen.h:
 
 ../appli/game/screens/options_screen.h:
@@ -147,4 +162,32 @@ appli/main.o: ../appli/main.c ../lib/hal/inc/stm32f1xx_hal.h \
 
 ../appli/game/screens/selection_screen.h:
 
+../appli/game/screens/../../ihm/game_board.h:
+
 ../appli/game/screens/start_screen.h:
+
+../appli/game/screens/arrow_screen.h:
+
+../appli/game/screens/../actions.h:
+
+../appli/game/screens/action_screen.h:
+
+../appli/game/screens/score_screen.h:
+
+../appli/game/screens/end_screen.h:
+
+../appli/tests/tests.h:
+
+../appli/tests/screen_tests.h:
+
+../appli/tests/utils_tests.h:
+
+../appli/tests/arrow_test.h:
+
+../appli/tests/../arrow/arrow.h:
+
+../lib/bsp/stm32f1_pwm.h:
+
+../lib/bsp/stm32f1_timer.h:
+
+../lib/bsp/stm32f1_timer.h:
