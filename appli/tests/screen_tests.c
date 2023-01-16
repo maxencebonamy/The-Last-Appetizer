@@ -38,6 +38,10 @@ void TEST_SCREEN_ButtonClick(void) {
 void TEST_SCREEN_GameBoard(void) {
     IHM_Init();
 
+    while (PLAYERS_GetCount() < 6) {
+    	PLAYERS_Add();
+    }
+
     GAME_BOARD_SetCenterPosition(160, 120);
     GAME_BOARD_SetPlayerPointed(0);
     GAME_BOARD_SetArrowRotationSpeed(0.2);

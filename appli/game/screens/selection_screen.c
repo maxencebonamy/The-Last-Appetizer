@@ -16,9 +16,14 @@ void SELECTION_SCREEN_Init(void) {
 }
 
 void SELECTION_SCREEN_Update(void) {
+    GAME_BOARD_Update();
 	if (IHM_IsClicking()) {
+        if (currentPlayer) {
+            PLAYERS_SetPosition(currentPlayer - 1, ARROW_GetAngle());
+        }
+
 		if (IHM_Collide(&previousButton)) {
-			if (currentPlayer == 0) {
+			if (!currentPlayer) {
                 GAME_BOARD_SetArrowRotationSpeed(0);
 				previousScreen = TRUE;
 			}
@@ -33,6 +38,9 @@ void SELECTION_SCREEN_Update(void) {
 				nextScreen = TRUE;
 			}
 			else {
+                if (!currentPlayer) {
+                    ARROW_Reset();
+                }
 				++currentPlayer;
 				SELECTION_SCREEN_Display();
 			}
@@ -44,10 +52,10 @@ void SELECTION_SCREEN_Display(void) {
 	IHM_Fill(IHM_COLOR_WHITE);
 
     char title[9] = "REGLAGE";
-    char instruction[45] = "Orientez \nla fl}che\nvers     \nl'{cran. ";
+    char instruction[45] = "Orientez \nla flèche\nvers     \nl'écran. ";
     if (currentPlayer) {
         sprintf(title, "JOUEUR %d", currentPlayer);
-        sprintf(instruction, "Orientez \nla fl}che\nvers le  \njoueur %d.", currentPlayer);
+        sprintf(instruction, "Orientez \nla flèche\nvers le  \njoueur %d.", currentPlayer);
     }
 
 	IHM_DrawRoundedRectangle(70, 10, 250, 60, IHM_COLOR_WHITE, IHM_COLOR_RED, 25);

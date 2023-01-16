@@ -17,7 +17,7 @@ typedef enum {
 } Test;
 
 
-static Test currentTest = ARROW_GET_ANGLE;
+static Test currentTest = ARROW_TURN;
 
 
 void TEST_DoAll(void);

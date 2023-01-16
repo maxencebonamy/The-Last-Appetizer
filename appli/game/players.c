@@ -11,6 +11,8 @@ static uint8_t players = PLAYERS_MIN;
 /// Indice du joueur courant
 static uint8_t current = 1;
 
+static double_t positions[PLAYERS_MAX];
+
 
 uint8_t PLAYERS_GetCount(void) {
 	return players;
@@ -43,4 +45,12 @@ void PLAYERS_Next(void) {
 uint8_t PLAYERS_ChooseRandom(void) {
     current = RANDOM_Get(1, players);
     return current;
+}
+
+double_t PLAYERS_GetPosition(uint8_t player) {
+    return positions[player];
+}
+
+uint8_t PLAYERS_SetPosition(uint8_t player, double_t position) {
+    positions[player] = position;
 }

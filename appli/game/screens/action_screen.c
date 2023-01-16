@@ -12,7 +12,7 @@ static IHM_Rect showButton = { 260, 10, 310, 60 };
 void ACTION_SCREEN_Init(void) {
     nextScreen = FALSE;
     isHidden = ACTIONS_GetCurrent()->hidden;
-    PLAYERS_ChooseRandom();
+    ACTIONS_ChooseRandom();
     ACTION_SCREEN_Display();
 }
 

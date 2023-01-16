@@ -2,6 +2,7 @@
 
 #include "../../ihm/game_board.h"
 #include "../players.h"
+#include "../../arrow/arrow.h"
 #include <stdio.h>
 
 void SELECTION_SCREEN_Init(void);

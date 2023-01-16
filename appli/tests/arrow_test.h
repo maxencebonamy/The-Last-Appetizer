@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../arrow/arrow.h"
-#include "../ihm/ihm.h"
+#include "../ihm/game_board.h"
 #include <stdio.h>
 
 

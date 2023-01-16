@@ -1,5 +1,5 @@
 selection_screen.c:12:6:SELECTION_SCREEN_Init	8	static
-selection_screen.c:18:6:SELECTION_SCREEN_Update	8	static
-selection_screen.c:43:6:SELECTION_SCREEN_Display	96	static
-selection_screen.c:66:8:SELECTION_SCREEN_PreviousScreen	4	static
-selection_screen.c:70:8:SELECTION_SCREEN_NextScreen	4	static
+selection_screen.c:18:6:SELECTION_SCREEN_Update	16	static
+selection_screen.c:51:6:SELECTION_SCREEN_Display	96	static
+selection_screen.c:74:8:SELECTION_SCREEN_PreviousScreen	4	static
+selection_screen.c:78:8:SELECTION_SCREEN_NextScreen	4	static

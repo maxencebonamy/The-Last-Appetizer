@@ -26,7 +26,8 @@ appli/arrow/arrow.o: ../appli/arrow/arrow.c ../appli/arrow/arrow.h \
  ../lib/hal/inc/stm32f1xx_ll_usb.h ../lib/hal/inc/stm32f1xx_hal_pcd_ex.h \
  ../lib/hal/inc/stm32f1xx_hal_hcd.h ../lib/bsp/stm32f1_timer.h \
  ../lib/bsp/macro_types.h ../lib/bsp/stm32f1_timer.h \
- ../lib/bsp/macro_types.h ../lib/bsp/stm32f1_adc.h
+ ../lib/bsp/macro_types.h ../appli/arrow/../utils/random.h \
+ ../lib/bsp/stm32f1_adc.h
 
 ../appli/arrow/arrow.h:
 
@@ -127,5 +128,7 @@ appli/arrow/arrow.o: ../appli/arrow/arrow.c ../appli/arrow/arrow.h \
 ../lib/bsp/stm32f1_timer.h:
 
 ../lib/bsp/macro_types.h:
+
+../appli/arrow/../utils/random.h:
 
 ../lib/bsp/stm32f1_adc.h:

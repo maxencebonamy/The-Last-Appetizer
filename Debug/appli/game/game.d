@@ -34,6 +34,8 @@ appli/game/game.o: ../appli/game/game.c ../appli/game/game.h \
  ../appli/game/screens/options_screen.h ../appli/game/screens/../mode.h \
  ../appli/game/screens/selection_screen.h \
  ../appli/game/screens/../../ihm/game_board.h \
+ ../appli/game/screens/../../arrow/arrow.h ../lib/bsp/stm32f1_pwm.h \
+ ../lib/bsp/stm32f1_timer.h ../lib/bsp/stm32f1_timer.h \
  ../appli/game/screens/start_screen.h \
  ../appli/game/screens/arrow_screen.h ../appli/game/screens/../actions.h \
  ../appli/game/screens/action_screen.h \
@@ -158,6 +160,14 @@ appli/game/game.o: ../appli/game/game.c ../appli/game/game.h \
 ../appli/game/screens/selection_screen.h:
 
 ../appli/game/screens/../../ihm/game_board.h:
+
+../appli/game/screens/../../arrow/arrow.h:
+
+../lib/bsp/stm32f1_pwm.h:
+
+../lib/bsp/stm32f1_timer.h:
+
+../lib/bsp/stm32f1_timer.h:
 
 ../appli/game/screens/start_screen.h:
 

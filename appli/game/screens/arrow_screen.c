@@ -6,12 +6,15 @@ static bool_e nextScreen = FALSE;
 
 void ARROW_SCREEN_Init(void) {
     nextScreen = FALSE;
+    PLAYERS_ChooseRandom();
+    ARROW_TurnUntil(PLAYERS_GetPosition(PLAYERS_GetCurrent()));
     ARROW_SCREEN_Display();
-    ACTIONS_ChooseRandom();
 }
 
 void ARROW_SCREEN_Update(void) {
-    if (IHM_IsClicking()) {
+    GAME_BOARD_Update();
+    ARROW_Update();
+    if (ARROW_IsAtDestination()) {
         GAME_BOARD_SetArrowRotationSpeed(0);
         nextScreen = TRUE;
     }

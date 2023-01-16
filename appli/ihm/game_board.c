@@ -16,9 +16,9 @@ static uint16_t xCenter = 160;
 /// Coordonnée y du centre du plateau (au centre par défaut)
 static uint16_t yCenter = 120;
 /// Angle de la flèche par rapport au centre du plateau (vers le bas par défaut)
-static float_t arrowAngle = 0.f;
+static double_t arrowAngle = 0.f;
 /// Vitesse de rotation de la flèche (en rad / ms)
-static float_t arrowRotationSpeed = 0.f;
+static double_t arrowRotationSpeed = 0.f;
 
 
 void GAME_BOARD_SetCenterPosition(uint16_t x, uint16_t y) {
@@ -31,8 +31,22 @@ void GAME_BOARD_SetPlayerPointed(uint8_t playerIndex) {
     arrowAngle = 3.14 * 2 * playerIndex / PLAYERS_GetCount();
 }
 
-void GAME_BOARD_SetArrowRotationSpeed(float_t value) {
+void GAME_BOARD_SetArrowRotationSpeed(double_t value) {
     arrowRotationSpeed = value;
+}
+
+void GAME_BOARD_SetArrowAngle(double_t value) {
+    // Conversion de l'angle de degrés vers radians
+    double_t newAngle = value * 3.14 / 180.f;
+    // On modifie la position de la flèche seulement si l'angle a changé
+    if (newAngle != arrowAngle) {
+        // Pour effacer la flèche, on en dessine une blanche
+        GAME_BOARD_DrawArrow(IHM_COLOR_WHITE);
+        // Changement de la valeur de l'angle
+        arrowAngle = newAngle;
+        // On dessine à nouveau la flèche
+        GAME_BOARD_DrawArrow(ARROW_COLOR);
+    }
 }
 
 void GAME_BOARD_Update(void) {
@@ -41,7 +55,7 @@ void GAME_BOARD_Update(void) {
         // Pour effacer la flèche, on en dessine une blanche
         GAME_BOARD_DrawArrow(IHM_COLOR_WHITE);
         // Incrémentation de l'angle
-        arrowAngle += arrowRotationSpeed;
+        arrowAngle -= arrowRotationSpeed;
         // On dessine à nouveau la flèche
         GAME_BOARD_DrawArrow(ARROW_COLOR);
     }

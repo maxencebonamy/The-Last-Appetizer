@@ -8,6 +8,8 @@
 #include "../../ihm/ihm.h"
 #include "../../utils/random.h"
 #include "../actions.h"
+#include "../players.h"
+#include "../../arrow/arrow.h"
 
 
 /**

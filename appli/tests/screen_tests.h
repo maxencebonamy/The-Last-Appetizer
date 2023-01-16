@@ -3,6 +3,7 @@
 
 #include "../ihm/ihm.h"
 #include "../ihm/game_board.h"
+#include "../game/players.h"
 
 
 void TEST_SCREEN_WriteText(void);

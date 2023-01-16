@@ -2,10 +2,32 @@
 
 
 void TEST_ARROW_Turn(void) {
-    ARROW_Turn();
+	IHM_Init();
+
+	IHM_Rect left = { 20, 20, 150, 110 };
+	IHM_Rect right = { 170, 20, 300, 110 };
+	IHM_Rect stop = { 20, 130, 300, 220 };
+
+	IHM_DisplayButton(&left, "LEFT", IHM_COLOR_BLUE);
+	IHM_DisplayButton(&right, "RIGHT", IHM_COLOR_PURPLE_1);
+	IHM_DisplayButton(&stop, "STOP", IHM_COLOR_RED);
+
+	ARROW_Turn(0);
 
     while (TRUE) {
+    	IHM_Update();
 
+    	if (IHM_IsClicking()) {
+    		if (IHM_Collide(&left)) {
+    			ARROW_Turn(100);
+    		}
+    		else if (IHM_Collide(&right)) {
+				ARROW_Turn(-100);
+			}
+    		else if (IHM_Collide(&stop)) {
+				ARROW_Turn(0);
+			}
+    	}
     }
 }
 
@@ -13,19 +35,12 @@ void TEST_ARROW_GetAngle(void) {
     IHM_Init();
 
     IHM_Fill(IHM_COLOR_WHITE);
-    IHM_Write(0, 0, 320, 240, "Appuyez\nsur l'écran", IHM_COLOR_BLACK, IHM_COLOR_WHITE);
+    GAME_BOARD_Display();
 
     while (TRUE) {
-        IHM_Update();
         ARROW_Update();
+        GAME_BOARD_SetArrowAngle(ARROW_GetAngle());
 
-        if (IHM_IsClicking()) {
-            IHM_Fill(IHM_COLOR_WHITE);
-
-            char string[3];
-            sprintf(string, "%d", ARROW_GetAngle());
-
-            IHM_Write(0, 0, 320, 240, string, IHM_COLOR_BLACK, IHM_COLOR_WHITE);
-        }
+        IHM_Update();
     }
 }

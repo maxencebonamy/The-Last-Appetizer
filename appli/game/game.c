@@ -7,7 +7,7 @@
 
 
 /// État actuel de la machine à états
-static State state = START;
+static State state = HOME;
 /// Variable qui va permettre d'effectuer l'action d'initialisation d'un état une seule fois
 static bool_e hasBeenInit = FALSE;
 
@@ -17,7 +17,6 @@ void GAME_Init(void) {
 
 void GAME_Update(void) {
     IHM_Update();
-    GAME_BOARD_Update();
 
 	switch (state) {
 

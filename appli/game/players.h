@@ -7,6 +7,7 @@
 
 #include "../utils/random.h"
 #include <stdint.h>
+#include <math.h>
 
 
 /// Nombre minimal de joueurs dans une partie
@@ -47,3 +48,7 @@ void PLAYERS_Next(void);
  * @pre Le random doit avoir été initialisé
  */
 uint8_t PLAYERS_ChooseRandom(void);
+
+double_t PLAYERS_GetPosition(uint8_t player);
+
+uint8_t PLAYERS_SetPosition(uint8_t player, double_t position);

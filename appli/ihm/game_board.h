@@ -29,7 +29,9 @@ void GAME_BOARD_SetPlayerPointed(uint8_t playerIndex);
  * @param value Vitesse de rotation de la flèche (en rad / ms)
  * @post La flèche ne tournera que si la fonction GAME_BOARD_Update est appelée dans la boucle principale
  */
-void GAME_BOARD_SetArrowRotationSpeed(float_t value);
+void GAME_BOARD_SetArrowRotationSpeed(double_t value);
+
+void GAME_BOARD_SetArrowAngle(double_t value);
 
 /**
  * @brief Met à jour le plateau de jeu, en particulier la flèche lorsqu'elle tourne

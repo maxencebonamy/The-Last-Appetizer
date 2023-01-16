@@ -13,12 +13,11 @@
 
 int main(void) {
 	// Initialisation de la couche logicielle HAL (Hardware Abstraction Layer)
- 	HAL_Init();
+
+	HAL_Init();
 
  	// Initialisation de l'ADC
-	ADC_init();
-
-	RANDOM_Init();
+	// ADC_init();
 
  	// Tests
     TEST_DoAll();
