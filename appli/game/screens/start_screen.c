@@ -1,3 +1,9 @@
+/**
+ * @brief État n°4 : Confirmation avant le lancement de la partie
+ * @author Maxence & Aymeric
+ */
+
+
 #include "start_screen.h"
 
 static IHM_Rect previousButton = { 10, 10, 60, 60 };

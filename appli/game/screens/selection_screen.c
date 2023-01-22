@@ -1,3 +1,9 @@
+/**
+ * @brief État n°3 : Sélection successive de la position de chacun des joueurs avec la flèche pour initialiser la partie
+ * @author Maxence & Aymeric
+ */
+
+
 #include "selection_screen.h"
 
 static IHM_Rect previousButton = { 10, 10, 60, 60 };

@@ -31,6 +31,10 @@ void GAME_BOARD_SetPlayerPointed(uint8_t playerIndex);
  */
 void GAME_BOARD_SetArrowRotationSpeed(double_t value);
 
+/**
+ * @brief Modifie directement l'angle de la flèche
+ * @param value Angle de la flèche
+ */
 void GAME_BOARD_SetArrowAngle(double_t value);
 
 /**

@@ -1,11 +1,24 @@
+/**
+ * @brief Gestion des scores des joueurs
+ * @author Maxence & Aymeric
+ */
+
 #include "scores.h"
 
+/// Score maximal, quand un joueur atteint ce score, la partie se termine
 #define SCORE_MAX 20
 
+/// Tableau du classement des joueurs
 static uint8_t ranking[PLAYERS_MAX];
+/// Tableau des scores des joueurs
 static uint8_t scores[PLAYERS_MAX];
+/// Booléen qui indique si le score maximal a été atteint ou non
 static bool_e isMaximumReached = FALSE;
 
+
+static void SCORES_Update(void);
+
+static uint8_t SCORES_GetRankOf(uint8_t player);
 
 void SCORES_Reset() {
     isMaximumReached = FALSE;
@@ -41,11 +54,14 @@ bool_e SCORES_IsMaximumReached(void) {
 }
 
 uint8_t SCORES_GetWinner(void) {
+	uint16_t maxScore = 0;
+	uint8_t winner = 0;
     for (uint8_t i = 0; i < PLAYERS_GetCount(); ++i) {
-        if (scores[i] >= SCORE_MAX) {
-            return i + 1;
+        if (scores[i] >= maxScore) {
+        	maxScore = scores[i];
         }
     }
+    return winner;
 }
 
 uint8_t SCORES_GetPlayerByRank(uint8_t value) {

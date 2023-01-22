@@ -1,5 +1,5 @@
 /**
- * @brief Écran où la flèche tourne
+ * @brief État n°6 : Écran où une action choisie aléatoirement est affichée sur l'écran
  * @author Maxence & Aymeric
  */
 

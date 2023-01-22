@@ -1,4 +1,13 @@
+/**
+ * @brief État n°2 : Écran de configuration de la partie (nombre de joueurs et mode de jeu)
+ * @author Maxence & Aymeric
+ */
+
+
 #include "options_screen.h"
+
+static void OPTIONS_SCREEN_DisplayModeButton(void);
+static void OPTIONS_SCREEN_DisplayPlayerCount(void);
 
 static IHM_Rect previousButton = { 10, 10, 60, 60 };
 static IHM_Rect nextButton = { 260, 10, 310, 60 };

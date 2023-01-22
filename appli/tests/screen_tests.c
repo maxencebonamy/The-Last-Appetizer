@@ -1,4 +1,12 @@
+/**
+ * @brief Gestion des tests liés à l'écran
+ * @author Maxence & Aymeric
+ */
+
+
 #include "screen_tests.h"
+
+#include "../ihm/game_board.h"
 
 
 void TEST_SCREEN_WriteText(void) {

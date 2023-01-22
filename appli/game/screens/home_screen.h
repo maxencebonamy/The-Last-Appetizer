@@ -1,5 +1,5 @@
 /**
- * @brief Écran d'accueil
+ * @brief État n°1 : Écran d'accueil
  * @author Maxence & Aymeric
  */
 

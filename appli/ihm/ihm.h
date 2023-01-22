@@ -11,12 +11,14 @@
 #include "utils/random.h"
 
 
-/// Structure représentant un rectangle
+/**
+ * @brief Rectangle
+ */
 typedef struct {
-	uint16_t x0;
-	uint16_t y0;
-	uint16_t x1;
-	uint16_t y1;
+	uint16_t x0;  //!< Coordonnée x du coin en haut à gauche
+	uint16_t y0;  //!< Coordonnée y du coin en haut à gauche
+	uint16_t x1;  //!< Coordonnée x du coin en bas à droite
+	uint16_t y1;  //!< Coordonnée y du coin en bas à droite
 } IHM_Rect;
 
 /// Couleurs pouvant être utilisées dans l'IHM (valeurs sur 16 bits)
@@ -110,7 +112,7 @@ void IHM_DrawFilledRoundedRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint1
 void IHM_DrawRoundedRectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color, uint16_t borderColor, uint16_t radius);
 
 /**
- * @brief Dessine un bouton (rectangle à coins arrondis + texte par dessus)
+ * @brief Dessine un bouton (rectangle à coins arrondis + texte par-dessus)
  * @param Rect Rectangle qui encadre le bouton
  * @param color Couleur de remplissage
  * @param title Texte affiché

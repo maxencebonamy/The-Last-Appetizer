@@ -42,10 +42,13 @@ void IHM_Update(void) {
 	if (XPT2046_getMedianCoordinates(&x, &y, XPT2046_COORDINATE_SCREEN_RELATIVE) && !t) {
         // Le délai correspond à 50ms (la fonction update est appelée chaque ms)
 		t = 50;
+
 		xPointer = x;
 		yPointer = y;
 		isClicking = TRUE;
-		RANDOM_Update();
+
+        // Génération d'un nombre aléatoire car l'action du clic de l'utilisateur n'est pas prédictible
+		RANDOM_Generate();
 	}
 }
 

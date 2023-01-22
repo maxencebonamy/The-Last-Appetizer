@@ -6,154 +6,70 @@
 #include "game.h"
 
 
+static State home =         { &HOME_SCREEN_Init,        &HOME_SCREEN_Update,        HOME };
+static State options =      { &OPTIONS_SCREEN_Init,     &OPTIONS_SCREEN_Update,     OPTIONS };
+static State selection =    { &SELECTION_SCREEN_Init,   &SELECTION_SCREEN_Update,   SELECTION };
+static State start =        { &START_SCREEN_Init,       &START_SCREEN_Update,       START };
+static State arrow =        { &ARROW_SCREEN_Init,       &ARROW_SCREEN_Update,       ARROW };
+static State action =       { &ACTION_SCREEN_Init,      &ACTION_SCREEN_Update,      ACTION };
+static State score =        { &SCORE_SCREEN_Init,       &SCORE_SCREEN_Update,       SCORE };
+static State end =          { &END_SCREEN_Init,         &END_SCREEN_Update,         END };
+
 /// État actuel de la machine à états
-static State state = HOME;
+static State* currentState = &home;
 /// Variable qui va permettre d'effectuer l'action d'initialisation d'un état une seule fois
 static bool_e hasBeenInit = FALSE;
 
+
+static void GAME_ChangeState(State* newState) {
+    currentState = newState;
+    hasBeenInit = FALSE;
+}
+
+
 void GAME_Init(void) {
 	IHM_Init();
+    ARROW_Init();
 }
 
 void GAME_Update(void) {
     IHM_Update();
 
-	switch (state) {
+    if (!hasBeenInit) {
+        (*currentState->initFunction)();
+        hasBeenInit = TRUE;
+    }
+
+    (*currentState->updateFunction)();
+
+	switch (currentState->state) {
 
 	case HOME:
-		if (!hasBeenInit) {
-			HOME_SCREEN_Init();
-			hasBeenInit = TRUE;
-		}
-
-		HOME_SCREEN_Update();
-
-		if (HOME_SCREEN_NextScreen()) {
-			state = OPTIONS;
-			hasBeenInit = FALSE;
-		}
-
-		break;
+		if (HOME_SCREEN_NextScreen())               GAME_ChangeState(&options);
 
 	case OPTIONS:
-		if (!hasBeenInit) {
-			OPTIONS_SCREEN_Init();
-			hasBeenInit = TRUE;
-		}
-
-		OPTIONS_SCREEN_Update();
-
-		if (OPTIONS_SCREEN_NextScreen()) {
-			state = SELECTION;
-			hasBeenInit = FALSE;
-		}
-		else if (OPTIONS_SCREEN_PreviousScreen()) {
-			state = HOME;
-			hasBeenInit = FALSE;
-		}
-
-		break;
+		if (OPTIONS_SCREEN_NextScreen())            GAME_ChangeState(&selection);
+		else if (OPTIONS_SCREEN_PreviousScreen())   GAME_ChangeState(&home);
 
 	case SELECTION:
-		if (!hasBeenInit) {
-			SELECTION_SCREEN_Init();
-			hasBeenInit = TRUE;
-		}
-
-		SELECTION_SCREEN_Update();
-
-		if (SELECTION_SCREEN_NextScreen()) {
-			state = START;
-			hasBeenInit = FALSE;
-		}
-        else if (SELECTION_SCREEN_PreviousScreen()) {
-            state = OPTIONS;
-            hasBeenInit = FALSE;
-        }
-
-		break;
+		if (SELECTION_SCREEN_NextScreen())          GAME_ChangeState(&start);
+        else if (SELECTION_SCREEN_PreviousScreen()) GAME_ChangeState(&options);
 
     case START:
-        if (!hasBeenInit) {
-            START_SCREEN_Init();
-            hasBeenInit = TRUE;
-        }
-
-        START_SCREEN_Update();
-
-        if (START_SCREEN_NextScreen()) {
-            state = ARROW;
-            hasBeenInit = FALSE;
-        }
-        else if (START_SCREEN_PreviousScreen()) {
-            state = SELECTION;
-            hasBeenInit = FALSE;
-        }
-
-        break;
+        if (START_SCREEN_NextScreen())              GAME_ChangeState(&arrow);
+        else if (START_SCREEN_PreviousScreen())     GAME_ChangeState(&selection);
 
     case ARROW:
-        if (!hasBeenInit) {
-            ARROW_SCREEN_Init();
-            hasBeenInit = TRUE;
-        }
-
-        ARROW_SCREEN_Update();
-
-        if (ARROW_SCREEN_NextScreen()) {
-            state = ACTION;
-            hasBeenInit = FALSE;
-        }
-
-        break;
+        if (ARROW_SCREEN_NextScreen())              GAME_ChangeState(&action);
 
     case ACTION:
-        if (!hasBeenInit) {
-            ACTION_SCREEN_Init();
-            hasBeenInit = TRUE;
-        }
-
-        ACTION_SCREEN_Update();
-
-        if (ACTION_SCREEN_NextScreen()) {
-            state = SCORE;
-            hasBeenInit = FALSE;
-        }
-
-        break;
+        if (ACTION_SCREEN_NextScreen())             GAME_ChangeState(&score);
 
     case SCORE:
-        if (!hasBeenInit) {
-            SCORE_SCREEN_Init();
-            hasBeenInit = TRUE;
-        }
+         if (SCORE_SCREEN_NextScreen())              GAME_ChangeState(SCORES_IsMaximumReached() ? &end : &arrow);
 
-        SCORE_SCREEN_Update();
-
-        if (SCORE_SCREEN_NextScreen()) {
-            state = SCORES_IsMaximumReached() ? END : ARROW;
-            hasBeenInit = FALSE;
-        }
-
-        break;
-    
     case END:
-        if (!hasBeenInit) {
-            END_SCREEN_Init();
-            hasBeenInit = TRUE;
-        }
-
-        END_SCREEN_Update();
-
-        if (END_SCREEN_NextScreen()) {
-            state = OPTIONS;
-            hasBeenInit = FALSE;
-        }
-
-        break;
-
-	default:
-		break;
+        if (END_SCREEN_NextScreen())                GAME_ChangeState(&options);
 
 	}
 }

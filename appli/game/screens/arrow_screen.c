@@ -1,23 +1,36 @@
+/**
+ * @brief État n°5 : Écran où la flèche tourne jusqu'à choisir un joueur aléatoirement
+ * @author Maxence & Aymeric
+ */
+
+
 #include "arrow_screen.h"
 
 
 static bool_e nextScreen = FALSE;
+static uint16_t t = 100;
 
 
 void ARROW_SCREEN_Init(void) {
     nextScreen = FALSE;
     PLAYERS_ChooseRandom();
-    ARROW_TurnUntil(PLAYERS_GetPosition(PLAYERS_GetCurrent()));
+    t = 100;
+    ARROW_Turn(50);
+    //ARROW_TurnUntil(PLAYERS_GetPosition(PLAYERS_GetCurrent()), RANDOM_Get(2, 4));
     ARROW_SCREEN_Display();
 }
 
 void ARROW_SCREEN_Update(void) {
+	if (!--t) {
+		ARROW_Turn(0);
+		nextScreen = TRUE;
+	}
     GAME_BOARD_Update();
-    ARROW_Update();
-    if (ARROW_IsAtDestination()) {
+
+    /*if (ARROW_IsAtDestination()) {
         GAME_BOARD_SetArrowRotationSpeed(0);
         nextScreen = TRUE;
-    }
+    }*/
 }
 
 void ARROW_SCREEN_Display(void) {

@@ -1,3 +1,9 @@
+/**
+ * @brief État n°8 : Écran où le joueur qui a gagné la partie est affiché sur l'écran
+ * @author Maxence & Aymeric
+ */
+
+
 #include "end_screen.h"
 
 

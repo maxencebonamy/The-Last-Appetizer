@@ -1,3 +1,9 @@
+/**
+ * @brief État n°1 : Écran d'accueil
+ * @author Maxence & Aymeric
+ */
+
+
 #include "home_screen.h"
 
 static IHM_Rect playButton = { 85, 140, 235, 190 };

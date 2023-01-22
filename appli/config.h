@@ -130,7 +130,7 @@
 #define USE_APDS9960			0	//Capteur de gestes, de couleur, de luminosit� ambiante
 #define USE_BH1750FVI			0	//Capteur de luminosit� ambiante
 #define USE_BMP180				0	//Capteur de pression
-#define USE_MOTOR_DC			0
+#define USE_MOTOR_DC			1
 #define USE_STEPPER_MOTOR		0
 #define USE_RTC					0
 #define USE_PWM					1

@@ -1,5 +1,5 @@
 /**
- * @brief Écran où la flèche tourne
+ * @brief État n°5 : Écran où la flèche tourne jusqu'à choisir un joueur aléatoirement
  * @author Maxence & Aymeric
  */
 

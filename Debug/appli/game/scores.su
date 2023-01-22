@@ -1,8 +1,8 @@
-scores.c:10:6:SCORES_Reset	16	static
-scores.c:18:9:SCORES_Get	16	static
-scores.c:22:6:SCORES_Add	32	static
-scores.c:39:8:SCORES_IsMaximumReached	4	static
-scores.c:43:9:SCORES_GetWinner	16	static
-scores.c:51:9:SCORES_GetPlayerByRank	16	static
-scores.c:55:13:SCORES_Update	16	static
-scores.c:64:16:SCORES_GetRankOf	24	static
+scores.c:18:6:SCORES_Reset	16	static
+scores.c:26:9:SCORES_Get	16	static
+scores.c:30:6:SCORES_Add	32	static
+scores.c:47:8:SCORES_IsMaximumReached	4	static
+scores.c:51:9:SCORES_GetWinner	16	static
+scores.c:62:9:SCORES_GetPlayerByRank	16	static
+scores.c:66:13:SCORES_Update	16	static
+scores.c:75:16:SCORES_GetRankOf	24	static

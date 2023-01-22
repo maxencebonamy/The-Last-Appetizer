@@ -1,4 +1,14 @@
+/**
+ * @brief Gestion des tests liés à la génération de nombres pseudo-aléatoires
+ * @author Maxence & Aymeric
+ */
+
+
 #include "utils_tests.h"
+
+#include "../utils/random.h"
+#include "../ihm/ihm.h"
+#include <stdio.h>
 
 
 void TEST_UTILS_GenerateRandomNumbers(void) {

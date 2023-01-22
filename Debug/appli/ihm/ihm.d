@@ -27,8 +27,7 @@ appli/ihm/ihm.o: ../appli/ihm/ihm.c ../appli/ihm/ihm.h \
  ../lib/hal/inc/stm32f1xx_hal_hcd.h \
  ../lib/bsp/tft_ili9341/stm32f1_fonts.h \
  ../lib/bsp/tft_ili9341/stm32f1_xpt2046.h ../lib/bsp/macro_types.h \
- ../appli/ihm/../game/players.h ../appli/ihm/../game/../utils/random.h \
- ../lib/bsp/stm32f1_adc.h ../lib/bsp/macro_types.h
+ ../appli/ihm/../game/players.h ../appli/ihm/../game/../utils/random.h
 
 ../appli/ihm/ihm.h:
 
@@ -131,7 +130,3 @@ appli/ihm/ihm.o: ../appli/ihm/ihm.c ../appli/ihm/ihm.h \
 ../appli/ihm/../game/players.h:
 
 ../appli/ihm/../game/../utils/random.h:
-
-../lib/bsp/stm32f1_adc.h:
-
-../lib/bsp/macro_types.h:

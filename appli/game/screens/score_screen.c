@@ -1,4 +1,13 @@
+/**
+ * @brief État n°7 : Affichage des scores des trois premiers joueurs dans l'ordre (du premier au troisième)
+ * @author Maxence & Aymeric
+ */
+
+
 #include "score_screen.h"
+
+
+static void SCORE_SCREEN_DrawPlayerScore(uint16_t y, uint8_t player, uint16_t color);
 
 
 static IHM_Rect nextButton = { 260, 10, 310, 60 };

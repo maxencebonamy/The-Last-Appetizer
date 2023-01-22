@@ -10,13 +10,13 @@
  * @brief Tous les modes de jeu possibles
  */
 typedef enum {
-	FAMILLE = 1,
-	APERO = 1 << 1,
-	HARD = 1 << 2
+	FAMILLE = 1,      //!< Mode Famille (le plus soft)
+	APERO = 1 << 1,   //!< Mode Apéro (en soirée)
+	HARD = 1 << 2     //!< Mode Hard (le plus dur)
 } Mode;
 
 /**
- * @brief Permet d'obtenir le mode acutellement selectionné
+ * @brief Permet d'obtenir le mode actuellement sélectionné
  * @return Mode acutellement selectionné
  */
 Mode MODE_Get(void);

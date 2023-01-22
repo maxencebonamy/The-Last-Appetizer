@@ -30,8 +30,7 @@ appli/game/screens/home_screen.o: ../appli/game/screens/home_screen.c \
  ../lib/bsp/tft_ili9341/stm32f1_fonts.h \
  ../lib/bsp/tft_ili9341/stm32f1_xpt2046.h ../lib/bsp/macro_types.h \
  ../appli/game/screens/../../ihm/../game/players.h \
- ../appli/game/screens/../../ihm/../game/../utils/random.h \
- ../lib/bsp/stm32f1_adc.h ../lib/bsp/macro_types.h
+ ../appli/game/screens/../../ihm/../game/../utils/random.h
 
 ../appli/game/screens/home_screen.h:
 
@@ -136,7 +135,3 @@ appli/game/screens/home_screen.o: ../appli/game/screens/home_screen.c \
 ../appli/game/screens/../../ihm/../game/players.h:
 
 ../appli/game/screens/../../ihm/../game/../utils/random.h:
-
-../lib/bsp/stm32f1_adc.h:
-
-../lib/bsp/macro_types.h:

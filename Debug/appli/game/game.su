@@ -1,2 +1,3 @@
-game.c:14:6:GAME_Init	8	static
-game.c:18:6:GAME_Update	8	static
+game.c:24:13:GAME_ChangeState	16	static
+game.c:30:6:GAME_Init	8	static
+game.c:35:6:GAME_Update	8	static

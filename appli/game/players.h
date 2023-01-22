@@ -43,12 +43,22 @@ uint8_t PLAYERS_GetCurrent(void);
 void PLAYERS_Next(void);
 
 /**
- * @brief Choisis un joueur aléatoirement et le renvoie
+ * @brief Choisit un joueur aléatoirement et le renvoie
  * @return Le joueur courant qui a été choisi aléatoirement
  * @pre Le random doit avoir été initialisé
  */
 uint8_t PLAYERS_ChooseRandom(void);
 
+/**
+ * @brief Renvoie la position (l'angle en degrés) du joueur dont le numéro a été précisé
+ * @param player Numéro du joueur
+ * @return Position (angle en degrés) du joueur
+ */
 double_t PLAYERS_GetPosition(uint8_t player);
 
-uint8_t PLAYERS_SetPosition(uint8_t player, double_t position);
+/**
+ * @brief Modifie la position (l'angle en degrés) du joueur dont le numéro a été précisé
+ * @param player Numéro du joueur
+ * @param position Position (angle en degrés) du joueur
+ */
+void PLAYERS_SetPosition(uint8_t player, double_t position);

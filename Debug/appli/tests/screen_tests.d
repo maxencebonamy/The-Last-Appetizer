@@ -1,12 +1,12 @@
 appli/tests/screen_tests.o: ../appli/tests/screen_tests.c \
- ../appli/tests/screen_tests.h ../appli/tests/../ihm/ihm.h \
- ../lib/bsp/tft_ili9341/stm32f1_ili9341.h ../appli/config.h \
- ../lib/hal/inc/stm32f1xx_hal.h ../lib/hal/inc/stm32f1xx_hal_conf.h \
- ../lib/hal/inc/stm32f1xx_hal_rcc.h ../lib/hal/inc/stm32f1xx_hal_def.h \
- ../lib/CMSIS/device/stm32f1xx.h ../lib/CMSIS/device/stm32f103xb.h \
- ../lib/CMSIS/core/core_cm3.h ../lib/CMSIS/core/cmsis_version.h \
- ../lib/CMSIS/core/cmsis_compiler.h ../lib/CMSIS/core/cmsis_gcc.h \
- ../lib/CMSIS/device/system_stm32f1xx.h \
+ ../appli/tests/screen_tests.h ../appli/tests/../ihm/game_board.h \
+ ../appli/tests/../ihm/ihm.h ../lib/bsp/tft_ili9341/stm32f1_ili9341.h \
+ ../appli/config.h ../lib/hal/inc/stm32f1xx_hal.h \
+ ../lib/hal/inc/stm32f1xx_hal_conf.h ../lib/hal/inc/stm32f1xx_hal_rcc.h \
+ ../lib/hal/inc/stm32f1xx_hal_def.h ../lib/CMSIS/device/stm32f1xx.h \
+ ../lib/CMSIS/device/stm32f103xb.h ../lib/CMSIS/core/core_cm3.h \
+ ../lib/CMSIS/core/cmsis_version.h ../lib/CMSIS/core/cmsis_compiler.h \
+ ../lib/CMSIS/core/cmsis_gcc.h ../lib/CMSIS/device/system_stm32f1xx.h \
  ../lib/hal/inc/stm32f1xx_hal_rcc_ex.h \
  ../lib/hal/inc/stm32f1xx_hal_gpio.h \
  ../lib/hal/inc/stm32f1xx_hal_gpio_ex.h \
@@ -29,10 +29,11 @@ appli/tests/screen_tests.o: ../appli/tests/screen_tests.c \
  ../lib/bsp/tft_ili9341/stm32f1_fonts.h \
  ../lib/bsp/tft_ili9341/stm32f1_xpt2046.h ../lib/bsp/macro_types.h \
  ../appli/tests/../ihm/../game/players.h \
- ../appli/tests/../ihm/../game/../utils/random.h ../lib/bsp/stm32f1_adc.h \
- ../lib/bsp/macro_types.h ../appli/tests/../ihm/game_board.h
+ ../appli/tests/../ihm/../game/../utils/random.h
 
 ../appli/tests/screen_tests.h:
+
+../appli/tests/../ihm/game_board.h:
 
 ../appli/tests/../ihm/ihm.h:
 
@@ -135,9 +136,3 @@ appli/tests/screen_tests.o: ../appli/tests/screen_tests.c \
 ../appli/tests/../ihm/../game/players.h:
 
 ../appli/tests/../ihm/../game/../utils/random.h:
-
-../lib/bsp/stm32f1_adc.h:
-
-../lib/bsp/macro_types.h:
-
-../appli/tests/../ihm/game_board.h:

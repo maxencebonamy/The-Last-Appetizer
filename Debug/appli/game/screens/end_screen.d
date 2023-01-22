@@ -30,7 +30,6 @@ appli/game/screens/end_screen.o: ../appli/game/screens/end_screen.c \
  ../lib/bsp/tft_ili9341/stm32f1_xpt2046.h ../lib/bsp/macro_types.h \
  ../appli/game/screens/../../ihm/../game/players.h \
  ../appli/game/screens/../../ihm/../game/../utils/random.h \
- ../lib/bsp/stm32f1_adc.h ../lib/bsp/macro_types.h \
  ../appli/game/screens/../scores.h
 
 ../appli/game/screens/end_screen.h:
@@ -136,9 +135,5 @@ appli/game/screens/end_screen.o: ../appli/game/screens/end_screen.c \
 ../appli/game/screens/../../ihm/../game/players.h:
 
 ../appli/game/screens/../../ihm/../game/../utils/random.h:
-
-../lib/bsp/stm32f1_adc.h:
-
-../lib/bsp/macro_types.h:
 
 ../appli/game/screens/../scores.h:

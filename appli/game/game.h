@@ -21,22 +21,24 @@
  * @brief Tous les états possibles de la machine à états
  */
 typedef enum {
-    // Écran d'accueil
-	HOME = 0,
-    // Configuration de la partie (mode et nombre de joueurs)
-	OPTIONS,
-    // Sélection manuelle de la position de chacun des joueurs
-	SELECTION,
-    // Écran de confirmation du lancement de la partie
-	START,
-    // Rotation de la flèche pour sélectionner un joueur
-	ARROW,
-    // Affichage de l'action que doit effectuer le joueur selectionné
-	ACTION,
-    // Affichage des scores
-	SCORE,
-    // Fin du jeu
-	END
+    HOME = 0,       //!< Écran d'accueil
+    OPTIONS,        //!< Configuration de la partie (mode et nombre de joueurs)
+    SELECTION,      //!< Sélection manuelle de la position de chacun des joueurs
+    START,          //!< Écran de confirmation du lancement de la partie
+    ARROW,          //!< Rotation de la flèche pour sélectionner un joueur
+    ACTION,         //!< Affichage de l'action que doit effectuer le joueur selectionné
+    SCORE,          //!< Affichage des scores
+    END             //!< Fin du jeu
+} GameState;
+
+/**
+ * @brief Agrégat de données représentant un état (avec son état dans
+ *        l'énumération et ses fonctions d'initialisation et de mise à jour)
+ */
+typedef struct {
+    void (*initFunction)(void);     //!< Fonction d'initialisation
+    void (*updateFunction)(void);   //!< Fonction de mise à jour
+    GameState state;                //!< État correspondant dans l'énumération
 } State;
 
 /**

@@ -27,7 +27,8 @@ appli/arrow/arrow.o: ../appli/arrow/arrow.c ../appli/arrow/arrow.h \
  ../lib/hal/inc/stm32f1xx_hal_hcd.h ../lib/bsp/stm32f1_timer.h \
  ../lib/bsp/macro_types.h ../lib/bsp/stm32f1_timer.h \
  ../lib/bsp/macro_types.h ../appli/arrow/../utils/random.h \
- ../lib/bsp/stm32f1_adc.h
+ ../lib/bsp/stm32f1_adc.h ../lib/bsp/stm32f1_motorDC.h \
+ ../lib/bsp/systick.h
 
 ../appli/arrow/arrow.h:
 
@@ -132,3 +133,7 @@ appli/arrow/arrow.o: ../appli/arrow/arrow.c ../appli/arrow/arrow.h \
 ../appli/arrow/../utils/random.h:
 
 ../lib/bsp/stm32f1_adc.h:
+
+../lib/bsp/stm32f1_motorDC.h:
+
+../lib/bsp/systick.h:

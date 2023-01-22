@@ -55,7 +55,7 @@ void GAME_BOARD_Update(void) {
         // Pour effacer la flèche, on en dessine une blanche
         GAME_BOARD_DrawArrow(IHM_COLOR_WHITE);
         // Incrémentation de l'angle
-        arrowAngle -= arrowRotationSpeed;
+        arrowAngle += arrowRotationSpeed;
         // On dessine à nouveau la flèche
         GAME_BOARD_DrawArrow(ARROW_COLOR);
     }

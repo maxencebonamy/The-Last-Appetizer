@@ -1,3 +1,9 @@
+/**
+ * @brief État n°6 : Écran où une action choisie aléatoirement est affichée sur l'écran
+ * @author Maxence & Aymeric
+ */
+
+
 #include "action_screen.h"
 
 static IHM_Rect cancelButton = { 10, 180, 155, 230 };
