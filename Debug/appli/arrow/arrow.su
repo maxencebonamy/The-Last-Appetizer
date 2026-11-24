@@ -1,7 +1,0 @@
-arrow.c:24:13:ARROW_Update	24	static
-arrow.c:52:6:ARROW_Turn	16	static
-arrow.c:57:6:ARROW_Init	8	static
-arrow.c:65:10:ARROW_GetAngle	4	static
-arrow.c:69:6:ARROW_Reset	4	static
-arrow.c:73:6:ARROW_TurnUntil	24	static
-arrow.c:79:8:ARROW_IsAtDestination	4	static

@@ -1,4 +1,0 @@
-arrow_screen.c:8:6:ARROW_SCREEN_Init	8	static
-arrow_screen.c:17:6:ARROW_SCREEN_Update	8	static
-arrow_screen.c:30:6:ARROW_SCREEN_Display	24	static
-arrow_screen.c:42:8:ARROW_SCREEN_NextScreen	4	static

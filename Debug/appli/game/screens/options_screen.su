@@ -1,7 +1,0 @@
-options_screen.c:17:6:OPTIONS_SCREEN_Init	8	static
-options_screen.c:23:6:OPTIONS_SCREEN_Update	8	static
-options_screen.c:53:6:OPTIONS_SCREEN_Display	24	static
-options_screen.c:71:8:OPTIONS_SCREEN_PreviousScreen	4	static
-options_screen.c:75:8:OPTIONS_SCREEN_NextScreen	4	static
-options_screen.c:79:13:OPTIONS_SCREEN_DisplayModeButton	8	static
-options_screen.c:83:13:OPTIONS_SCREEN_DisplayPlayerCount	32	static

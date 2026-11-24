@@ -1,4 +1,0 @@
-stm32f1_motorDC.c:113:11:DEMO_MOTOR_statemachine	32	static
-stm32f1_motorDC.c:208:12:MOTOR_add	48	static
-stm32f1_motorDC.c:241:18:MOTOR_gpio_and_pin_to_pwm_channel	72	static
-stm32f1_motorDC.c:340:6:MOTOR_set_duty	24	static

@@ -1,2 +1,0 @@
-random.c:13:6:RANDOM_Generate	8	static
-random.c:21:10:RANDOM_Get	24	static

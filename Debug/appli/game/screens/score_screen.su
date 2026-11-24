@@ -1,5 +1,0 @@
-score_screen.c:12:6:SCORE_SCREEN_Init	8	static
-score_screen.c:17:6:SCORE_SCREEN_Update	8	static
-score_screen.c:23:6:SCORE_SCREEN_Display	24	static
-score_screen.c:36:8:SCORE_SCREEN_NextScreen	4	static
-score_screen.c:40:13:SCORE_SCREEN_DrawPlayerScore	56	static

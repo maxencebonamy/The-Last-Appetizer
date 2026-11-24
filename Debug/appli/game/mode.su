@@ -1,3 +1,0 @@
-mode.c:12:6:MODE_Get	4	static
-mode.c:16:6:MODE_Change	4	static
-mode.c:31:7:MODE_ToString	4	static

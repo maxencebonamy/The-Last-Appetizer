@@ -1,4 +1,0 @@
-home_screen.c:8:6:HOME_SCREEN_Init	8	static
-home_screen.c:13:6:HOME_SCREEN_Update	8	static
-home_screen.c:19:6:HOME_SCREEN_Display	24	static
-home_screen.c:25:8:HOME_SCREEN_NextScreen	4	static

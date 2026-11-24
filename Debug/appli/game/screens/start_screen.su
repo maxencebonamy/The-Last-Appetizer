@@ -1,5 +1,0 @@
-start_screen.c:10:6:START_SCREEN_Init	8	static
-start_screen.c:16:6:START_SCREEN_Update	8	static
-start_screen.c:28:6:START_SCREEN_Display	24	static
-start_screen.c:39:8:START_SCREEN_PreviousScreen	4	static
-start_screen.c:43:8:START_SCREEN_NextScreen	4	static
